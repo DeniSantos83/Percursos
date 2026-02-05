@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog – Percursos Analíticos</title>
+
+  <!-- Tipografias suaves e legíveis -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <style>
+    :root{
+      --bg:#f7f9fb;
+      --ink:#243041;
+      --muted:#5b6b7a;
+      --primary:#6d87a8;
+      --primary-700:#5a7392;
+      --card:#ffffff;
+    }
+
+    body{
+      font-family:"Manrope",system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      scroll-behavior:smooth;
+    }
+
+    /* ====================== NAVBAR ====================== */
+    .navbar{
+      backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.8)!important;
+      border-bottom:1px solid rgba(0,0,0,.05);
+    }
+
+    /* ====================== HERO ====================== */
+    .blog-hero{
+      background:linear-gradient(180deg,#ffffff 0%,#eef3f7 100%);
+      padding:6rem 0 4rem;
+      text-align:center;
+    }
+
+    .blog-hero h1{
+      font-family:"Playfair Display",serif;
+      font-weight:700;
+      letter-spacing:-0.02em;
+    }
+
+    /* ====================== POST CARDS ====================== */
+    .post-card{
+      background:var(--card);
+      border-radius:22px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:0 4px 18px rgba(0,0,0,.06);
+      overflow:hidden;
+      transition:transform .25s ease,height .3s;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      opacity:0;
+      transform:translateY(30px);
+      animation:fadeSlideUp .8s ease forwards;
+    }
+
+    @keyframes fadeSlideUp{
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    .post-card:hover{ transform:translateY(-4px); }
+
+    .post-card img{
+      width:100%;
+      height:220px;
+      object-fit:contain;
+      border-bottom:1px solid rgba(0,0,0,.05);
+    }
+
+    .post-card .p-4{
+      flex-grow:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    /* ====================== MODAL ====================== */
+    .modal.fade .modal-dialog{
+      transform:scale(0.95);
+      opacity:0;
+      transition:all .35s ease;
+    }
+    .modal.show .modal-dialog{
+      transform:scale(1);
+      opacity:1;
+    }
+
+    .modal-body{
+      max-height:70vh;
+      overflow-y:auto;
+    }
+
+    footer{ color:#5a6a79; }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg py-2">
+    <div class="container">
+      <a class="navbar-brand fw-extrabold" href="index.html">
+        Percursos Analíticos</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#atendimento">Atendimento</a></li>
+          <li class="nav-item"><a class="nav-link" href="#frases">Frases</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="blog.html">Blog</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary btn-sm" href="index.html#contato">
+              <i class="bi bi-calendar2-check me-1"></i>Agendar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1 class="display-5 mb-3">Blog</h1>
+      <p class="lead text-muted">
+        Reflexões, textos e partilhas sobre Psicanálise e o cuidado com a saúde mental.
+      </p>
+    </div>
+  </section>
+
+  <!-- Lista de Posts -->
+  <section class="py-5">
+    <div class="container">
+      <div id="postsContainer" class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="postModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content shadow-lg">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="postModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img id="postModalImg" class="w-100 mb-3 rounded" alt="">
+          <p id="postModalText" class="text-secondary lh-lg"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <div class="small">© <span id="year"></span> Percursos Analíticos — Taise Brasil (CRP 19/4957)</div>
+      <div class="small">Desenvolvido por deniCreativeStudio☁️</div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script>
+    let posts = [];
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    fetch('posts.json')
+      .then(r => r.json())
+      .then(data => {
+        posts = data;
+        const c = document.getElementById('postsContainer');
+        posts.forEach((p, i) => {
+          const el = document.createElement('div');
+          el.className = 'col-12 col-md-6 col-lg-4';
+          el.innerHTML = `
+            <div class="post-card h-100" style="animation-delay:${i * 0.15}s">
+              ${p.imagem ? `<img src="${p.imagem}" alt="${p.titulo}">` : ''}
+              <div class="p-4">
+                <div>
+                  <h5 class="fw-bold mb-2">${p.titulo}</h5>
+                  <p class="small text-muted mb-2">${p.data}</p>
+                  <p class="text-secondary">${p.texto.substring(0, 180)}...</p>
+                </div>
+                <div class="mt-3 text-end">
+                  <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#postModal" onclick="abrirModal(${i})">
+                    Ler mais
+                  </button>
+                </div>
+              </div>
+            </div>`;
+          c.appendChild(el);
+        });
+      })
+      .catch(err => console.error('Erro ao carregar posts:', err));
+
+    function abrirModal(i) {
+      const p = posts[i];
+      document.getElementById('postModalLabel').textContent = p.titulo;
+      document.getElementById('postModalImg').src = p.imagem || '';
+      document.getElementById('postModalImg').alt = p.titulo;
+      document.getElementById('postModalText').textContent = p.texto;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
