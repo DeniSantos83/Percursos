@@ -20,7 +20,6 @@ export default function Navbar() {
           <a href="#inicio" onClick={() => setOpen(false)}>Início</a>
           <a href="#sobre" onClick={() => setOpen(false)}>Sobre mim</a>
           <a href="#atendimento" onClick={() => setOpen(false)}>Atendimento</a>
-          <a href="#como-funciona" onClick={() => setOpen(false)}>Como funciona</a>
           <a href="#contato" onClick={() => setOpen(false)}>Contato</a>
         </nav>
 
@@ -30,7 +29,7 @@ export default function Navbar() {
           rel="noreferrer"
           className="button button-primary button-pill navbar-cta"
         >
-          Agendar atendimento
+          Fale comigo
         </a>
       </div>
     </header>

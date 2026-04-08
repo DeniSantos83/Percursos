@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer id="contato" className="footer">
       <div className="container">
         <div className="footer-shell">
           <div className="footer-top">
@@ -24,7 +24,6 @@ export default function Footer() {
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre mim</a>
                 <a href="#atendimento">Atendimento</a>
-                <a href="#como-funciona">Como funciona</a>
                 <a href="#contato">Contato</a>
               </div>
             </div>

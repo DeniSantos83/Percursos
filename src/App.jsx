@@ -3,9 +3,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import CareSection from "./sections/CareSection";
-import HowItWorksSection from "./sections/HowItWorksSection";
-import ContactSection from "./sections/ContactSection";
 import Footer from "./components/Footer";
+import RevealOnScroll from "./components/RevealOnScroll";
 
 export default function App() {
   return (
@@ -14,9 +13,9 @@ export default function App() {
       <HeroSection />
       <AboutSection />
       <CareSection />
-      <HowItWorksSection />
-      <ContactSection />
-      <Footer />
+      <RevealOnScroll delay={120} duration={800} distance={28}>
+        <Footer />
+      </RevealOnScroll>
       <WhatsAppButton />
     </div>
   );

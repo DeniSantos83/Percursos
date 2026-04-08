@@ -6,11 +6,8 @@
   --text: #243041;
   --muted: #5f6f7f;
 
-  /* Mantive o verde porque você já estava usando.
-     Se quiser depois eu te devolvo uma versão mais “luxo calmo”
-     com azul acinzentado nos CTAs e verde só no WhatsApp. */
-  --primary: #25d366;
-  --primary-dark: #1faa52;
+  --primary: #25a6ce;
+  --primary-dark: #007e94;
 
   --line: rgba(36, 48, 65, 0.08);
   --line-soft: rgba(255, 255, 255, 0.55);
@@ -94,17 +91,11 @@ img {
   min-height: 82px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  position: relative;
+  gap: 24px;
 }
 
 .brand {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  white-space: nowrap;
+  margin-right: auto;
 }
 
 .nav-links {
@@ -114,7 +105,13 @@ img {
   font-size: 16px;
   color: var(--muted);
   white-space: nowrap;
+  margin-right: 12px;
 }
+
+.navbar-cta {
+  flex-shrink: 0;
+}
+
 
 .nav-links a {
   position: relative;
@@ -515,51 +512,65 @@ img {
 }
 
 /* =========================
-   FOOTER
-========================= */
-/* =========================
    FOOTER PREMIUM SAAS
 ========================= */
 .footer {
-  margin-top: 72px;
-  padding-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #17263d 0%, #13233b 100%);
+  padding: 28px 0 0;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/src/assets/images/mar.jpg") center bottom / cover no-repeat;
+  opacity: 5.9;
+  z-index: 0;
+}
+
+.footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-shell {
   position: relative;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 30px;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.86),
-    rgba(245, 249, 255, 0.74)
+    rgba(255, 255, 255, 0.88),
+    rgba(245, 249, 255, 0.76)
   );
   border: 1px solid rgba(255, 255, 255, 0.72);
-  box-shadow: 0 24px 60px rgba(60, 79, 102, 0.12);
+  box-shadow: 0 20px 48px rgba(60, 79, 102, 0.11);
   backdrop-filter: blur(14px);
 }
 
 .footer-shell::before {
   content: "";
   position: absolute;
-  width: 260px;
-  height: 260px;
-  right: -80px;
-  top: -80px;
+  width: 220px;
+  height: 220px;
+  right: -70px;
+  top: -70px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(37, 211, 102, 0.10), transparent 70%);
+  background: radial-gradient(circle, rgba(37, 211, 102, 0.08), transparent 70%);
   pointer-events: none;
 }
 
 .footer-shell::after {
   content: "";
   position: absolute;
-  width: 220px;
-  height: 220px;
-  left: -70px;
-  bottom: -70px;
+  width: 190px;
+  height: 190px;
+  left: -55px;
+  bottom: -55px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(120, 146, 176, 0.10), transparent 70%);
+  background: radial-gradient(circle, rgba(120, 146, 176, 0.08), transparent 70%);
   pointer-events: none;
 }
 
@@ -567,9 +578,9 @@ img {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr 1fr;
-  gap: 42px;
-  padding: 56px;
+  grid-template-columns: 1.25fr 0.85fr 0.95fr;
+  gap: 34px;
+  padding: 42px 46px 36px;
 }
 
 .footer-brand-block,
@@ -582,40 +593,40 @@ img {
 .footer-badge {
   display: inline-flex;
   align-items: center;
-  padding: 10px 16px;
+  padding: 9px 15px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--primary-dark);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   box-shadow: var(--shadow-soft);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .footer-title {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   font-family: "Playfair Display", serif;
-  font-size: 34px;
-  line-height: 1.15;
+  font-size: 30px;
+  line-height: 1.14;
   letter-spacing: -0.03em;
   color: var(--text);
-  max-width: 14ch;
+  max-width: 13ch;
 }
 
 .footer-description {
   margin: 0;
-  max-width: 48ch;
+  max-width: 46ch;
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .footer-heading {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--text);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -624,7 +635,7 @@ img {
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .footer-links a {
@@ -656,15 +667,16 @@ img {
 }
 
 .footer-cta-text {
-  margin: 0 0 20px;
+  margin: 0 0 18px;
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.85;
-  max-width: 28ch;
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 26ch;
 }
 
 .footer-button {
-  min-width: 210px;
+  min-width: 190px;
+  padding: 13px 20px;
 }
 
 .footer-divider {
@@ -680,7 +692,7 @@ img {
 .footer-bottom {
   position: relative;
   z-index: 1;
-  padding: 22px 56px;
+  padding: 18px 46px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -691,7 +703,7 @@ img {
 .footer-bottom p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* =========================
@@ -717,6 +729,7 @@ img {
 @media (max-width: 768px) {
   .footer {
     margin-top: 56px;
+    padding-top: 18px;
   }
 
   .footer-shell {
@@ -753,6 +766,7 @@ img {
     font-size: 13px;
   }
 }
+
 /* =========================
    WHATSAPP FLOAT
 ========================= */

@@ -25,24 +25,13 @@ export default function HeroSection() {
                 rel="noreferrer"
                 className="button button-primary"
               >
-                Agendar agora
-              </a>
-
-              <a
-                href="https://wa.me/5579991160780?text=Olá%20Taise,%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho."
-                target="_blank"
-                rel="noreferrer"
-                className="button button-outline"
-              >
                 Conheça meu trabalho
               </a>
+
+              
             </div>
 
-            <div className="hero-highlight">
-              <span>Privacidade</span>
-              <span>Empatia</span>
-              <span>Ética profissional</span>
-            </div>
+            
           </div>
 
           <div className="card-photo image-frame reveal reveal-delay-1">
