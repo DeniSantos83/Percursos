@@ -2,8 +2,6 @@ import atendimento1 from "../assets/images/atendimento1.jpg";
 import atendimento2 from "../assets/images/atendimento2.jpg";
 import atendimento3 from "../assets/images/atendimento3.jpg";
 import atendimento4 from "../assets/images/atendimento4.jpg";
-import caixa from "../assets/images/saude_caixa_1.png";
-import petrobras from "../assets/images/logo_petro.png";
 import RevealOnScroll from "../components/RevealOnScroll";
 
 export default function CareSection() {
@@ -32,15 +30,7 @@ export default function CareSection() {
                 <li>Informações sobre valores e disponibilidade pelo WhatsApp</li>
               </ul>
 
-              <p className="plans-label">
-                Atendimento por convênios e particular
-              </p>
-
-              <div className="plans-logos">
-                <img src={caixa} alt="Saúde Caixa" />
-                <img src={petrobras} alt="Saúde Petrobras" />
-                <span>… e particular</span>
-              </div>
+              
 
               <div className="actions">
                 <a
