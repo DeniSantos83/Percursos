@@ -890,6 +890,15 @@ img {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
+  /* Texto antes da foto apenas no mobile */
+  .about-content-block {
+    order: 1;
+  }
+
+  .about-image-block {
+    order: 2;
+  }
+
   .section {
     padding: 64px 0;
   }
@@ -990,9 +999,14 @@ img {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
 
+.gallery-item,
+.small-gallery-item {
+  min-height: 150px;
+}
   .plans-logos img {
     height: 64px;
   }

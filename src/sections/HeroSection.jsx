@@ -14,8 +14,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg mb-30">
-              Sou <strong>Taise Brasil (CRP 19/4957)</strong>, psicóloga de orientação
-              psicanalítica. Atendo adolescentes e adultos de forma online ou presencial em Aracaju.
+              Sou <strong>Taise Brasil</strong>, psicóloga de orientação
+              psicanalítica e realizo atendimentos psicológicos particulares para adolescentes, adultos e idosos, de forma presencial em Aracaju ou online.
             </p>
 
             <div className="actions">

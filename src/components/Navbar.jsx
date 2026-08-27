@@ -12,6 +12,7 @@ export default function Navbar() {
           className="mobile-menu-button"
           onClick={() => setOpen(!open)}
           aria-label="Abrir menu"
+          aria-expanded={open}
         >
           ☰
         </button>
@@ -19,6 +20,7 @@ export default function Navbar() {
         <nav className={`nav-links ${open ? "nav-links-open" : ""}`}>
           <a href="#inicio" onClick={() => setOpen(false)}>Início</a>
           <a href="#sobre" onClick={() => setOpen(false)}>Sobre mim</a>
+          <a href="#questoes" onClick={() => setOpen(false)}>Psicoterapia</a>
           <a href="#atendimento" onClick={() => setOpen(false)}>Atendimento</a>
           <a href="#contato" onClick={() => setOpen(false)}>Contato</a>
         </nav>

@@ -1,0 +1,86 @@
+/* Nova seção: questões que podem fazer parte da psicoterapia */
+.issues-section {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(37, 166, 206, 0.1), transparent 24%),
+    var(--bg-soft);
+}
+
+.issues-heading {
+  max-width: 820px;
+  margin-bottom: 36px;
+}
+
+.issues-intro {
+  max-width: 760px;
+  margin: 0;
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.issue-card {
+  min-height: 126px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.issue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.issue-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.issue-marker {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: var(--primary);
+  box-shadow: 0 0 0 6px rgba(37, 166, 206, 0.1);
+}
+
+@media (max-width: 992px) {
+  .issues-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .issues-heading {
+    margin-bottom: 28px;
+  }
+
+  .issues-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .issue-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .issue-card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}

@@ -19,18 +19,25 @@ export default function CareSection() {
                 Atendimento online ou presencial, com leveza desde o primeiro contato.
               </h2>
 
-              <p className="text mb-24">
-                Sessões para adolescentes, adultos e idosos, de forma online por videochamada
-                ou presencial em Aracaju.
+              <p className="text mb-18">
+                O primeiro contato é feito pelo WhatsApp, onde apresento as informações
+                iniciais sobre o atendimento, valores e disponibilidade de horários.
+              </p>
+
+              <p className="text mb-18">
+                A primeira sessão é dedicada à escuta da demanda e à construção do primeiro
+                contato com o processo terapêutico. A partir dela, frequência e formato das
+                sessões seguintes são definidos de acordo com cada caso e com a condução clínica.
               </p>
 
               <ul className="list mb-28">
-                <li>Primeiro acolhimento para escuta da demanda</li>
-                <li>Orientações sobre formato e frequência do atendimento</li>
-                <li>Informações sobre valores e disponibilidade pelo WhatsApp</li>
+                <li><strong>Presencial:</strong> Aracaju (SE)</li>
+                <li><strong>Online:</strong> videochamada, para outras localidades</li>
               </ul>
 
-              
+              <p className="text mb-28">
+                Para saber mais ou agendar uma consulta, envie uma mensagem pelo WhatsApp.
+              </p>
 
               <div className="actions">
                 <a
@@ -48,12 +55,7 @@ export default function CareSection() {
           <RevealOnScroll delay={120} duration={850} distance={36}>
             <div className="gallery-grid">
               {images.map((image, index) => (
-                <RevealOnScroll
-                  key={index}
-                  delay={index * 120}
-                  duration={700}
-                  distance={24}
-                >
+                <RevealOnScroll key={index} delay={index * 120} duration={700} distance={24}>
                   <div className="gallery-item image-frame small-gallery-item">
                     <img
                       src={image}

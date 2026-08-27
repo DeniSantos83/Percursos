@@ -6,11 +6,7 @@ export default function Footer() {
           <div className="footer-top">
             <div className="footer-brand-block">
               <span className="footer-badge">Percursos Analíticos</span>
-
-              <h3 className="footer-title">
-                Psicologia com escuta ética, tranquila e acolhedora.
-              </h3>
-
+              <h3 className="footer-title">Psicologia com escuta ética, tranquila e acolhedora.</h3>
               <p className="footer-description">
                 Um espaço de cuidado pensado para acolher com delicadeza, clareza
                 e presença humana, no online ou no presencial em Aracaju.
@@ -19,10 +15,10 @@ export default function Footer() {
 
             <div className="footer-nav-block">
               <p className="footer-heading">Navegação</p>
-
               <div className="footer-links">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre mim</a>
+                <a href="#questoes">Psicoterapia</a>
                 <a href="#atendimento">Atendimento</a>
                 <a href="#contato">Contato</a>
               </div>
@@ -30,11 +26,7 @@ export default function Footer() {
 
             <div className="footer-cta-block">
               <p className="footer-heading">Contato direto</p>
-
-              <p className="footer-cta-text">
-                Fale comigo pelo WhatsApp para agendar ou tirar dúvidas.
-              </p>
-
+              <p className="footer-cta-text">Fale comigo pelo WhatsApp para agendar ou tirar dúvidas.</p>
               <a
                 href="https://wa.me/5579991160780?text=Olá%20Taise,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20você."
                 target="_blank"
@@ -47,7 +39,6 @@ export default function Footer() {
           </div>
 
           <div className="footer-divider" />
-
           <div className="footer-bottom">
             <p>© {new Date().getFullYear()} Percursos Analíticos — Taise Brasil</p>
             <p>Desenvolvido por deniCreativeStudio</p>

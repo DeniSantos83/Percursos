@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import WhatsAppButton from "./components/WhatsAppButton";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
+import IssuesSection from "./sections/IssuesSection";
 import CareSection from "./sections/CareSection";
 import Footer from "./components/Footer";
 import RevealOnScroll from "./components/RevealOnScroll";
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <IssuesSection />
       <CareSection />
       <RevealOnScroll delay={120} duration={800} distance={28}>
         <Footer />
