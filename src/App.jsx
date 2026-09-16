@@ -4,6 +4,7 @@ import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import IssuesSection from "./sections/IssuesSection";
 import CareSection from "./sections/CareSection";
+import ReviewsSection from "./sections/ReviewsSection";
 import Footer from "./components/Footer";
 import RevealOnScroll from "./components/RevealOnScroll";
 
@@ -15,6 +16,7 @@ export default function App() {
       <AboutSection />
       <IssuesSection />
       <CareSection />
+      <ReviewsSection />
       <RevealOnScroll delay={120} duration={800} distance={28}>
         <Footer />
       </RevealOnScroll>

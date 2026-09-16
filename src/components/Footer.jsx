@@ -6,10 +6,13 @@ export default function Footer() {
           <div className="footer-top">
             <div className="footer-brand-block">
               <span className="footer-badge">Percursos Analíticos</span>
-              <h3 className="footer-title">Psicologia com escuta ética, tranquila e acolhedora.</h3>
+              <h3 className="footer-title">
+                Psicologia com escuta ética, tranquila e acolhedora.
+              </h3>
               <p className="footer-description">
-                Um espaço de cuidado pensado para acolher com delicadeza, clareza
-                e presença humana, no online ou no presencial em Aracaju.
+                Um espaço de cuidado pensado para acolher com delicadeza,
+                clareza e presença humana, no online ou no presencial em
+                Aracaju.
               </p>
             </div>
 
@@ -26,21 +29,25 @@ export default function Footer() {
 
             <div className="footer-cta-block">
               <p className="footer-heading">Contato direto</p>
-              <p className="footer-cta-text">Fale comigo pelo WhatsApp para agendar ou tirar dúvidas.</p>
+              <p className="footer-cta-text">
+                Fale comigo pelo WhatsApp para agendar ou tirar dúvidas.
+              </p>
               <a
-                href="https://wa.me/5579991160780?text=Olá%20Taise,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20você."
+                href="https://wa.me/5579991160780?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20da%20Taise.%20"
                 target="_blank"
                 rel="noreferrer"
                 className="button button-primary footer-button"
               >
-                Falar no WhatsApp
+                Comece seu processo terapêutico
               </a>
             </div>
           </div>
 
           <div className="footer-divider" />
           <div className="footer-bottom">
-            <p>© {new Date().getFullYear()} Percursos Analíticos — Taise Brasil</p>
+            <p>
+              © {new Date().getFullYear()} Percursos Analíticos — Taise Brasil
+            </p>
             <p>Desenvolvido por deniCreativeStudio</p>
           </div>
         </div>

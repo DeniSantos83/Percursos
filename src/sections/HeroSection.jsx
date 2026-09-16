@@ -5,39 +5,43 @@ export default function HeroSection() {
     <main id="inicio" className="section hero-section">
       <div className="container">
         <div className="reveal">
-        <section className="hero-grid">
-          <div>
-            <p className="badge">escuta ética, tranquila e acolhedora</p>
+          <section className="hero-grid">
+            <div>
+              <p className="badge">
+                Atendimento particular — não atendendemos convênios
+              </p>
 
-            <h1 className="title-xl">
-              Psicologia com presença leve, humana e acolhedora.
-            </h1>
+              <h1 className="title-xl">
+                Psicologia com presença leve, humana e acolhedora.
+              </h1>
 
-            <p className="text-lg mb-30">
-              Sou <strong>Taise Brasil</strong>, psicóloga de orientação
-              psicanalítica e realizo atendimentos psicológicos particulares para adolescentes, adultos e idosos, de forma presencial em Aracaju ou online.
-            </p>
+              <p className="text-lg mb-30">
+                Sou <strong>Taise Brasil</strong>, psicóloga de orientação
+                psicanalítica e realizo atendimentos psicológicos particulares
+                para adolescentes, adultos e idosos, de forma presencial em
+                Aracaju ou online.
+              </p>
 
-            <div className="actions">
-              <a
-                href="https://wa.me/5579991160780?text=Olá%20Taise,%20gostaria%20de%20agendar%20um%20atendimento."
-                target="_blank"
-                rel="noreferrer"
-                className="button button-primary"
-              >
-                Conheça meu trabalho
-              </a>
-
-              
+              <div className="actions">
+                <a
+                  href="https://wa.me/5579991160780?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20da%20Taise.%20"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button button-primary"
+                >
+                  Agende sua primeira consulta
+                </a>
+              </div>
             </div>
 
-            
-          </div>
-
-          <div className="card-photo image-frame reveal reveal-delay-1">
-            <img src={heroImage} alt="Taise Brasil" className="section-image" />
-          </div>
-        </section>
+            <div className="card-photo image-frame reveal reveal-delay-1">
+              <img
+                src={heroImage}
+                alt="Taise Brasil"
+                className="section-image"
+              />
+            </div>
+          </section>
         </div>
       </div>
     </main>

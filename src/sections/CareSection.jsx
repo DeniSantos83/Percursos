@@ -41,7 +41,7 @@ export default function CareSection() {
 
               <div className="actions">
                 <a
-                  href="https://wa.me/5579991160780?text=Olá%20Taise,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+                  href="https://wa.me/5579991160780?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20da%20Taise.%20"
                   target="_blank"
                   rel="noreferrer"
                   className="button button-primary"
