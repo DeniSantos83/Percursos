@@ -36,7 +36,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://wa.me/5579991160780?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20da%20Taise.%20"
+          href="https://tintim.link/whatsapp/f45168fc-10a1-484e-bfec-dd9ccd560171/16a63886-339b-4fbe-9add-50b6e3a73113"
           target="_blank"
           rel="noreferrer"
           className="button button-primary button-pill navbar-cta"
